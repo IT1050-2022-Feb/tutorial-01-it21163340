@@ -7,23 +7,47 @@ Do not change the code given in the main() function when you are implementing yo
 #include <stdio.h>
 
 int main() {
+   int no1, no2;
+   printf("Enter a value for no 1 : ");
+   scanf("%d", &no1);
+   printf("Enter a value for no 2 : ");
+   scanf("%d", &no2);
+   printf("%d ", minimum(no1, no2));
+   printf("%d ", maximum(no1, no2));
+   printf("%d ", multiply(no1, no2));
+   return 0;
+}
 
-  float distance, price;
+int minimum(int a, int b){
+  
+  int min;
 
-  printf("Input the distance travelled : ");
-  scanf("%f", &distance);
-  printf("\n");
-
-  printf("The distance travelled is : %.f\n", distance);
-
-  if (distance <= 30){
-    price = distance*50;
-  }  
+  if (a < b){
+    min = a;
+  }
   else{
-    price = (30*50) + (distance - 30)*40;
+    min = b;
   }
 
- printf("The amount to be paid is Rs. %.2f\n", price);
+  return min;
+}
+
+int maximum(int a, int b){
   
-  return 0;
+  int max;
+
+  if (a > b){
+    max = a;
+  }
+  else{
+    max = b;
+  }
+
+  return max;
+}
+
+int multiply(int a, int b){
+  
+  return a*b;
+
 }
